@@ -20,6 +20,31 @@ void PrintMenu() {
 
 void ExecuteMenu(char option, ShoppingCart& theCart) {
    /* Type your code here */
+   string itemName;
+   int qty;
+   switch(option){
+      case a:
+      cout << "ADD ITEM FROM CART" << endl;
+      theCart.AddItem();
+      break;
+      case d:
+      cout << "REMOVE ITEM FROM CART" << endl;
+      cout << "Enter name of item to remove:" << endl;
+      cin >> itemName;
+      cout << endl;
+      theCart.RemoveItem(string itemName);
+      break;
+      case c:
+      cout << "CHANGE ITEM QUANTITY" << endl;
+      cout << "Enter the item name:" << endl;
+      cin >> itemName;
+      cout << endl;
+      cout << "Enter the new quantity:" << endl;
+      cin >> qty;
+      theCart.ModifyItem();
+      break;
+      case i:
+      
    
    
 }

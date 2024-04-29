@@ -20,10 +20,13 @@ void PrintMenu() {
 
 void ExecuteMenu(char option, ShoppingCart& theCart) {
    /* Type your code here */
+   ItemToPurchase item;
    string itemName;
    int qty;
    string description;
    int price;
+
+   while(true){
    switch(option){
       case a:
       cout << "ADD ITEM FROM CART" << endl;
@@ -35,14 +38,12 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
       cin >> price;
       cout << "Enter the item quantity:" << endl;
       cin >> qty;
-      
-      theCart.AddItem();
+      theCart.AddItem(item);    //check this!!!
       break;
       case d:
       cout << "REMOVE ITEM FROM CART" << endl;
       cout << "Enter name of item to remove:" << endl;
       cin >> itemName;
-      cout << endl;
       theCart.RemoveItem(string itemName);
       break;
       case c:
@@ -52,20 +53,24 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
       cout << endl;
       cout << "Enter the new quantity:" << endl;
       cin >> qty;
-      theCart.ModifyItem();
+      theCart.ModifyItem(item);
       break;
-      case i:
-
+      case i:  //Output item description: PrintDescriptions() 
+      cout << "OUTPUT ITEMS' DESCRIPTIONS" << endl;
+      theCart.PrintDescriptions();
       break;
-      case o:
-
+      case o: //Output shopping cart: PrintTotal() 
+      cout << "OUTPUT SHOPPING CART" << endl;
+      theCart.PrintTotal();
       break;
-      case q:
-
+      case q: //
       break;
+      break;
+      default:
+      
       
    
-   
+   }
    }
 }
 

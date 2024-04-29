@@ -22,9 +22,20 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
    /* Type your code here */
    string itemName;
    int qty;
+   string description;
+   int price;
    switch(option){
       case a:
       cout << "ADD ITEM FROM CART" << endl;
+      cout << "Enter the item name:" << endl;
+      cin >> itemName;
+      cout << "Enter the item Description:" << endl;
+      cin >> description;
+      cout << "Enter the item price:" << endl;
+      cin >> price;
+      cout << "Enter the item quantity:" << endl;
+      cin >> qty;
+      
       theCart.AddItem();
       break;
       case d:
@@ -44,9 +55,18 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
       theCart.ModifyItem();
       break;
       case i:
+
+      break;
+      case o:
+
+      break;
+      case q:
+
+      break;
       
    
    
+   }
 }
 
 int main() {

@@ -15,16 +15,16 @@ class ShoppingCart {
       string GetCustomerName() const;
       string GetDate() const;
       
-      void AddItem(ItemToPurchase item);
-      void RemoveItem(string name);
+      void AddItem(const ItemToPurchase& item);
+      void RemoveItem(const string& name);
       
-      void ModifyItem(ItemToPurchase item);
+      void ModifyItem(const ItemToPurchase& item);
       
-      int GetNumItemsInCart();
-      double GetCostOfCart();
+      int GetNumItemsInCart() const;
+      double GetCostOfCart() const;
       
-      void PrintTotal();
-      void PrintDescriptions();
+      void PrintTotal() const;
+      void PrintDescriptions() const;
       
    
    private:

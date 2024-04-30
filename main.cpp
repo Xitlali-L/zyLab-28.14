@@ -1,5 +1,5 @@
 // git repository link
-// team members: Xitlali Lopez and Kamile Cerna
+// team members: Xitlali Lopez and Kamile Cerna 
 
 #include <iostream>
 #include <iomanip>

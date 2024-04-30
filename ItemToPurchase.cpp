@@ -6,7 +6,7 @@ using namespace std;
 
 ItemToPurchase::ItemToPurchase(){
 }
-ItemToPurchase::ItemToPurchase(string name, string description, int price, int quantity = 0){
+ItemToPurchase::ItemToPurchase(string name, string description, double price, int quantity){
 itemName = name;
 itemDescription = description;
 itemPrice = price;
@@ -39,10 +39,10 @@ int ItemToPurchase::GetQuantity() const{
 }
 
 void ItemToPurchase::PrintItemCost(){
-  cout << itemName << " " << itemQuantity << " @ $" << itemPrice << " = $";
+  cout << itemName << " " << itemQuantity << " @ $" << itemPrice << " = $" << itemQuantity * itemPrice << endl;
 }
 
 void ItemToPurchase::PrintItemDescription(){
-  cout << itemName << ": " << itemDescription << "." << endl;
+  cout << itemName << ": " << itemDescription << endl;
 }
 

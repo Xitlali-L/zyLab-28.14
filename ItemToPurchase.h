@@ -9,8 +9,8 @@ class ItemToPurchase {
    
    public:
       ItemToPurchase();
-      ItemToPurchase(string name, string description, 
-                  int price, int quantity = 0);
+      ItemToPurchase(string name, string description = "none", 
+                  double price = 0, int quantity = 0);
       
       void SetName(string name);
       void SetDescription(string description);
@@ -22,8 +22,8 @@ class ItemToPurchase {
       int GetPrice() const;
       int GetQuantity() const;
       
-      void PrintItemCost();
-      void PrintItemDescription();
+      void PrintItemCost() const;
+      void PrintItemDescription() const;
    
    private:
       string itemName;

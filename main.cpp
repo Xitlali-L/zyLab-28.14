@@ -74,7 +74,6 @@ void ExecuteMenu(char options, ShoppingCart& theCart) {
         theCart.PrintTotal();
         break;
     case 'q':
-        cout << "Quit program." << endl;
         break;
     }
 }

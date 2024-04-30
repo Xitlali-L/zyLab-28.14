@@ -1,48 +1,50 @@
-/* Type your code here */
 #include <iostream>
+#include "ItemToPurchase.h"
 using namespace std;
 
-#include "ItemToPurchase.h"
-
-ItemToPurchase::ItemToPurchase(){
-}
-ItemToPurchase::ItemToPurchase(string name, string description, double price, int quantity){
-itemName = name;
-itemDescription = description;
-itemPrice = price;
-itemQuantity = quantity;
+ItemToPurchase::ItemToPurchase(string n, string des, double pri, int qty) {
+name = n;
+itemDescription = des;
+price = pri;
+quantity = qty;
 }
 
-void ItemToPurchase::SetName(string name){
-itemName = name;
-}
-void ItemToPurchase::SetDescription(string description){
-  itemDescription = description;
-}
-void ItemToPurchase::SetPrice(int price){
-  itemPrice = price;
-}
-void ItemToPurchase::SetQuantity(int quantity){
-  itemQuantity = quantity;
-}
-string ItemToPurchase::GetName() const{
-  return itemName;
-}
-string ItemToPurchase::GetDescription() const;={
-  return itemDescription;
-}
-int ItemToPurchase::GetPrice() const{
-  return itemPrice;
-}
-int ItemToPurchase::GetQuantity() const{
-  return itemQuantity;
+void ItemToPurchase::SetName(string n) {
+name = n;
 }
 
-void ItemToPurchase::PrintItemCost(){
-  cout << itemName << " " << itemQuantity << " @ $" << itemPrice << " = $" << itemQuantity * itemPrice << endl;
+void ItemToPurchase::SetDescription(string des) {
+itemDescription = des;
 }
 
-void ItemToPurchase::PrintItemDescription(){
-  cout << itemName << ": " << itemDescription << endl;
+void ItemToPurchase::SetPrice(double pri) {
+price = pri;
 }
 
+void ItemToPurchase::SetQuantity(int qty) {
+quantity = qty;
+}
+
+string ItemToPurchase::GetName() const {
+return name;
+}
+
+string ItemToPurchase::GetDescription() const {
+return itemDescription;
+}
+
+double ItemToPurchase::GetPrice() const {
+return price;
+}
+
+int ItemToPurchase::GetQuantity() const {
+return quantity;
+}
+
+void ItemToPurchase::PrintItemCost() const {
+cout << name << ' ' << quantity << " @ $" << price << " = $" << quantity*price << endl;
+}
+
+void ItemToPurchase::PrintItemDescription() const {
+cout << name << ": " << itemDescription << endl;
+}
